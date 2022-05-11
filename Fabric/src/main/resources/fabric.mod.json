@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "multiloader",
+  "id": "blockdestroyspeedtweaker",
   "version": "${version}",
-  "name": "Example Mod",
+  "name": "Block Destroy Speed Tweaker",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Corgi Taco"
   ],
   "contact": {
-    "homepage": "https://github.com/CorgiTaco/Corgis-MultiLoader-Template",
-    "sources": "https://github.com/CorgiTaco/Corgis-MultiLoader-Template"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/Block-Destroy-Speed-Tweaker",
+    "sources": "https://github.com/CorgiTaco/Block-Destroy-Speed-Tweaker"
   },
-  "license": "CC0-1.0",
+  "license": "LGPLv3",
   "icon": "assets/modid/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.examplemod.ExampleModFabric"
+      "corgitaco.blockdestroyspeedtweaker.BlockDestroySpeedTweakerFabric"
     ]
   },
   "mixins": [
-    "multiloader.mixins.json",
-    "multiloader.fabric.mixins.json"
+    "blockdestroyspeedtweaker.mixins.json",
+    "blockdestroyspeedtweaker.fabric.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.13",

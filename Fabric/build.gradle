@@ -21,6 +21,7 @@ configurations {
 }
 shadowJar {
     configurations = [project.configurations.shadow]
+    relocate 'blue.endless.jankson', "${project.group}.shadow.blue.endless.jankson"
 }
 
 archivesBaseName = "${mod_name}-fabric-${minecraft_version}"
@@ -43,9 +44,11 @@ dependencies {
         officialMojangMappings()
         parchment("org.parchmentmc.data:parchment-1.18.2:${parchment_version}@zip")
     }
+    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation project(":Common")
+    shadow("blue.endless:jankson:${jankson_version}")
 }
 
 loom {
